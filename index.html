@@ -15,16 +15,24 @@
 
 <body>
 
-    <form>
-        <div class="container-fluid">
-            <div class="container">
 
-                <div class="row">
-                    <div class="col p-2">
-                        <h1> Payment For Example</h1>
-                        <span> Some fields are missing <span>
-                    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="container">
+            <nav class="navbar navbar-light bg-light p-2 border border-1 rounded">
+                <a class="navbar-brand" href="#">
+                    <h1>Payment For Example</h1>
+                </a>
+            </nav>
+            <form class="border p-4 rounded">
+
+                <div class="col p-2">
+                    <nav class="navbar p-2 border border-1 rounded">
+                        <a class="navbar-brand" href="#"><span> Some fields are missing <span></span></a>
+                    </nav>
+
                 </div>
+
 
                 <div class="row">
                     <div class="col-6">
@@ -89,21 +97,19 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6">
-                        <div class="mb-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    <i class="fa-brands fa-cc-mastercard"></i>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-3">
+                        <div class="mb-3 ">
+                            <label for="weaccept" class="form-label">We Accept</label>
+                            <div class="iconostarjetas bg-secondary p-2 border border-1 rounded ">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        <i class="fa-brands fa-cc-mastercard"></i>
+                                    </label>
+                                </div>
 
-                    <div class="row">
-                        <div class="col">
-                            <div class="mb-3">
+
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault"
                                         id="flexRadioDefault2" checked>
@@ -125,26 +131,43 @@
                                         <i class="fa-brands fa-cc-paypal"></i>
                                     </label>
                                 </div>
+
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
+                    </div>
+                    <div class="col-3"></div>
+
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="anynotes" class="form-label">Add any notes here </label>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <div class="mb-3">
+                            <nav class="navbar navbar-light bg-light p-2 border border-1 rounded">
+                                <a class="navbar-brand" href="#">
+                                    <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
+                                    <button class="btn btn-primary" type="button">Send</button>
+                                </a>
+                            </nav>
                         </div>
                     </div>
 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <div class="mb-3">
-                            <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-                            <button class="btn btn-primary" type="button">Send</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </form>
+
+    </div>
+    </div>
+
 </body>
 
 </html>
