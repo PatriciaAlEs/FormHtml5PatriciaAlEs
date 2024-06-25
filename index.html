@@ -14,160 +14,169 @@
 </head>
 
 <body>
-
-
-
     <div class="container-fluid mt-5">
         <div class="container">
-            <nav class="navbar navbar-light bg-light p-2 border border-1 rounded">
-                <a class="navbar-brand" href="#">
-                    <h1>Payment For Example</h1>
-                </a>
-            </nav>
-            <form class="border p-4 rounded">
-
-                <div class="col p-2">
-                    <nav class="navbar p-2 border border-1 rounded">
-                        <a class="navbar-brand" href="#"><span> Some fields are missing <span></span></a>
-                    </nav>
-
-                </div>
-
-
-                <div class="row">
-                    <div class="col-6">
-                        <div class="mb-3">
-                            <label for="card" class="form-label">Card #</label>
-                            <input type="text" class="form-control" id="card" placeholder="xxxxxxxxxxxxxxx">
-                        </div>
+            <form class="border rounded needs-validation" novalidate>
+                <nav class="navbar navbar-light bg-light p-2 border-bottom">
+                    <a class="navbar-brand" href="#">
+                        <h1>Payment For Example</h1>
+                    </a>
+                </nav>
+                <div class="container-fluid p-3">
+                    <div class="col mb-3">
+                        <nav class="navbar p-3 border border-1 rounded">
+                            <a class="navbar-brand" href="#"><span> Some fields are missing</span></a>
+                        </nav>
                     </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label for="cvc" class="form-label">CVC #</label>
-                            <input type="text" class="form-control" id="cvc" placeholder="0000">
+                    <div class="row">
+                        <div class="col fs-4">
+                            <div class="mb-3">
+                                <label for="card" class="form-label">Card #</label>
+                                <input type="text" class="form-control" id="card" placeholder="xxxxxxxxxxxxxxx" pattern="\d{12}" required>
+                                <div class="invalid-feedback">Please enter a valid card number.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="mb-3">
-                            <label for="amount" class="form-label">Amount</label>
-                            <input type="text" class="form-control" id="amount" placeholder="Amount">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="firstname" class="form-label">First Name </label>
-                            <input type="text" class="form-control" id="firstname">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="lastname" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="lastname">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" class="form-control" id="city">
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="state" class="form-label">State</label>
-                            <select class="form-select" id="state">
-                                <option selected>Pick a State</option>
-                                <option value="1">Primera opción</option>
-                                <option value="2">Segunda opción</option>
-                                <option value="3">Tercera opción</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="postalcode" class="form-label">Postal Code</label>
-                            <input type="text" class="form-control" id="postalcode">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3">
-                        <div class="mb-3 ">
-                            <label for="weaccept" class="form-label">We Accept</label>
-                            <div class="iconostarjetas bg-secondary p-2 border border-1 rounded ">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        <i class="fa-brands fa-cc-mastercard"></i>
-                                    </label>
+                        <div class="col fs-4">
+                            <div class="mb-3">
+                                <div class="mb-3">
+                                    <label for="cvc" class="form-label">CVC #</label>
+                                    <input type="text" class="form-control" id="cvc" placeholder="0000" pattern="\d{3,4}" required>
+                                    <div class="invalid-feedback">Please enter a valid CVC number (3 digits).</div>
                                 </div>
-
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        <i class="fa-brands fa-cc-visa"></i>
-                                    </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="Amount" class="form-label fs-4">Amount</label>
+                                <div class="d-flex">
+                                    <p class="dolar"><strong>$ </strong></p>
+                                    <input type="text" class="form-control" id="Amount" placeholder="xxxxxxxxxxxxxxx" pattern="\d{2,4}" required>
+                                    <div class="invalid-feedback">Please enter an amount.</div>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault3">
-                                    <label class="form-check-label" for="flexRadioDefault3">
-                                        <i class="fa-solid fa-credit-card"></i>
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault4">
-                                    <label class="form-check-label" for="flexRadioDefault4">
-                                        <i class="fa-brands fa-cc-paypal"></i>
-                                    </label>
-                                </div>
-
                             </div>
                         </div>
                     </div>
-                    <div class="col-3"></div>
-
-
-                    <div class="col">
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            <label for="anynotes" class="form-label">Add any notes here </label>
+                    <div class="row">
+                        <div class="col fs-4">
+                            <div class="mb-3">
+                                <label for="firstname" class="form-label">First Name </label>
+                                <input type="text" class="form-control" id="firstname" required>
+                                <div class="invalid-feedback">Please enter your first name.</div>
+                            </div>
                         </div>
-
+                        <div class="col fs-4">
+                            <div class="mb-3">
+                                <label for="lastname" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastname" required>
+                                <div class="invalid-feedback">Please enter your last name.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 fs-4">
+                            <div class="mb-3">
+                                <label for="city" class="form-label">City</label>
+                                <input type="text" class="form-control" id="city" required>
+                                <div class="invalid-feedback">Please enter your city.</div>
+                            </div>
+                        </div>
+                        <div class="col-3 fs-4">
+                            <div class="mb-3">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">Pick a State</option>
+                                    <option value="1">Castellon</option>
+                                    <option value="2">Valencia</option>
+                                    <option value="3">Alicante</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a state.</div>
+                            </div>
+                        </div>
+                        <div class="col-3 fs-4">
+                            <div class="mb-3">
+                                <label for="postalcode" class="form-label">Postal Code</label>
+                                <input type="text" class="form-control" id="postalcode" pattern="\d{3,4}" required>
+                                <div class="invalid-feedback">Please enter your postal code (5 digits).</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="p-1">
+                                <label for="weaccept" class="form-label pb-3 fs-4">We Accept:</label>
+                                <div class="iconostarjetas bg-secondary p-2 border border-1 rounded">
+                                    <div class="form-check text-white">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            <i class="fa-brands fa-cc-mastercard"></i>
+                                        </label>
+                                        <div class="invalid-feedback">Please select a payment method.</div>
+                                    </div>
+                                    <div class="form-check text-white">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked required>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            <i class="fa-brands fa-cc-visa"></i>
+                                        </label>
+                                        <div class="invalid-feedback">Please select a payment method.</div>
+                                    </div>
+                                    <div class="form-check text-white">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" required>
+                                        <label class="form-check-label" for="flexRadioDefault3">
+                                            <i class="fa-solid fa-credit-card"></i>
+                                        </label>
+                                        <div class="invalid-feedback">Please select a payment method.</div>
+                                    </div>
+                                    <div class="form-check text-white">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" required>
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                            <i class="fa-brands fa-cc-paypal"></i>
+                                        </label>
+                                        <div class="invalid-feedback">Please select a payment method.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3"></div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label fs-4">Message</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                                <div class="invalid-feedback">Please enter a message.</div>
+                                <label for="anynotes" class="form-label" style="color: gray;">Add any notes here</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <nav class="navbar navbar-light bg-light d-flex justify-content-end border-top">
+                    <a class="navbar-brand" href="#">
+                        <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
+                        <button class="btn btn-primary" type="submit">Send</button>
+                    </a>
+                </nav>
             </form>
-            <div class="row">
-                <div class="col">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <div class="mb-3">
-                            <nav class="navbar navbar-light bg-light p-2 border border-1 rounded">
-                                <a class="navbar-brand" href="#">
-                                    <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-                                    <button class="btn btn-primary" type="button">Send</button>
-                                </a>
-                            </nav>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
-
-    </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                
+                var forms = document.getElementsByClassName('needs-validation');
+                
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
 </body>
-
-</html>
