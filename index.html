@@ -95,7 +95,7 @@
                         <div class="col-3 fs-4">
                             <div class="mb-3">
                                 <label for="postalcode" class="form-label">Postal Code</label>
-                                <input type="text" class="form-control" id="postalcode" pattern="\d{3,4}" required>
+                                <input type="text" class="form-control" id="postalcode" pattern="\d{5}" required>
                                 <div class="invalid-feedback">Please enter your postal code (5 digits).</div>
                             </div>
                         </div>
@@ -161,22 +161,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                
-                var forms = document.getElementsByClassName('needs-validation');
-                
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+       (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
     </script>
 </body>
